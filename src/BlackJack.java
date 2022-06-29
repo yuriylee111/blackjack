@@ -20,9 +20,7 @@ public class BlackJack {
             player1.takesFrom(deck);
             System.out.println("player = " + player1);
             System.out.printf("player points = %s, one more(y/n): ", player1.getSum());
-            if (player1.getSum() == 21) {
-                continue;
-            } else if (player1.getSum() > 21) {
+            if (player1.getSum() > 21) {
                 System.out.println("\nplayer loses");
                 return;
             }

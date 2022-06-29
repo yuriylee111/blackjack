@@ -1,10 +1,12 @@
 
-#/.gitignore
+/.gitignore
 
 target
 
 #/src/main/webapp/WEB-INF/lib
 
+/gitgit
+/gitgit.pub
 
 # Ignore bundler config.
 /.bundle
