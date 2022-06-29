@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerHand {
-    private List<Card> cards = new ArrayList<>();
+    private final List<Card> cards = new ArrayList<>();
 
     public void takesFrom(Deck deck) {
         cards.add(deck.draw());
@@ -38,7 +38,7 @@ public class PlayerHand {
                 case THREE:
                     sum += 3;
                     break;
-                /*case FOUR:
+                case FOUR:
                     sum += 4;
                     break;
                 case FIVE:
@@ -57,7 +57,7 @@ public class PlayerHand {
                     sum += 9;
                     break;
                 case TEN:
-                case JACK:*/
+                case JACK:
                 case QUEEN:
                 case KING:
                     sum += 10;

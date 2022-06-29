@@ -19,8 +19,10 @@ public class BlackJack {
         do {
             player1.takesFrom(deck);
             System.out.println("player = " + player1);
-            System.out.printf("scores = %s, one more(y/n): ", player1.getSum());
-            if (player1.getSum() > 21) {
+            System.out.printf("player points = %s, one more(y/n): ", player1.getSum());
+            if (player1.getSum() == 21) {
+                continue;
+            } else if (player1.getSum() > 21) {
                 System.out.println("\nplayer loses");
                 return;
             }
@@ -30,10 +32,12 @@ public class BlackJack {
         do {
             dealer.takesFrom(deck);
             System.out.println("dealer = " + dealer);
-            System.out.println("scores = " + dealer.getSum());
+            System.out.println("dealer points = " + dealer.getSum());
         } while (dealer.getSum() < 15);
 
-        if (player1.getSum() <= 21 && dealer.getSum() > 21) {
+        if (player1.getSum() == dealer.getSum() ) {
+            System.out.println("draw");
+        } else if (player1.getSum() <= 21 && dealer.getSum() > 21) {
             System.out.println("player wins");
         } else if (player1.getSum() > dealer.getSum() && player1.getSum() <= 21 && dealer.getSum() <= 21) {
             System.out.println("player wins");
